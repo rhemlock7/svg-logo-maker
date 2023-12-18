@@ -5,26 +5,28 @@ inquirer
     .prompt([
         {
             type: 'input',
-            name: 'name',
-            message: 'Question',
+            name: 'letters',
+            message: 'What letters do you want to include in your logo?',
         },
         {
-            type: 'checkbox',
-            name: 'stack',
-            message: 'Question',
-            choices: ['HTML', 'CSS', 'JavaScript', 'MySQL'],
+            type: 'input',
+            name: 'textColor',
+            message: 'What color should the text be?',
         },
         {
             type: 'list',
-            name: 'contact',
-            message: 'Question',
-            choices: ['email', 'phone', 'telekinesis'],
+            name: 'shape',
+            message: 'What shape should your logo be?',
+            choices: ['circle', 'square', 'triangle'],
+        },
+        {
+            type: 'input',
+            name: 'shapeColor',
+            message: 'What color should the shape be?',
         },
     ])
     .then((data) => {
-        const filename = `${data.name.toLowerCase().split(' ').join('')}.svg`;
-
-        fs.writeFile(filename, JSON.stringify(data, null, '\t'), (err) =>
-            err ? console.log(err) : console.log('Success!')
+        fs.writeFile('logo.svg', JSON.stringify(data, null, '\t'), (err) =>
+            err ? console.log(err) : console.log('Generated logo.svg!')
         );
     });
