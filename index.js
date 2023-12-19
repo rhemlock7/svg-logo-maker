@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const shapes = require('./lib/shapes')
 
 inquirer
     .prompt([
@@ -25,8 +26,8 @@ inquirer
             message: 'What color should the shape be?',
         },
     ])
-    .then((data) => {
-        fs.writeFile('logo.svg', JSON.stringify(data, null, '\t'), (err) =>
+    .then((response) => {
+        fs.writeFile('./examples/logo.svg', JSON.stringify(response, null, '\t'), (err) =>
             err ? console.log(err) : console.log('Generated logo.svg!')
         );
     });
