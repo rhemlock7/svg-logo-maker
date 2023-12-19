@@ -27,7 +27,11 @@ inquirer
         },
     ])
     .then((response) => {
-        fs.writeFile('./examples/logo.svg', JSON.stringify(response, null, '\t'), (err) =>
-            err ? console.log(err) : console.log('Generated logo.svg!')
-        );
+        if (response.shape === 'circle') {
+            const shape = new Circle(response.letters, response)
+            // render()
+            fs.writeFile('./examples/logo.svg', render(), (err) =>
+                err ? console.log(err) : console.log('Generated logo.svg!')
+            );
+        }
     });
