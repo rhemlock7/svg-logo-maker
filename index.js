@@ -28,8 +28,9 @@ inquirer
     ])
     .then((response) => {
         if (response.shape === 'circle') {
+            //create new shape
             const shape = new Circle(response.letters, response)
-            // render()
+            // render() a a 
             fs.writeFile('./examples/logo.svg', render(), (err) =>
                 err ? console.log(err) : console.log('Generated logo.svg!')
             );
