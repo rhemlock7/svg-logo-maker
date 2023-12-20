@@ -28,19 +28,19 @@ inquirer
     ])
     .then((response) => {
         if (response.shape === 'circle') {
-            const shape = new Shapes.circle(response.letters, response.textColor, response.shape, response.shapeColor)
+            const shape = new Shapes.circle(response.letters, response.textColor, response.shapeColor)
 
             fs.writeFile('./examples/logo.svg', shape.createSVG(), (err) =>
                 err ? console.log(err) : console.log('Generated logo.svg!')
             );
         } else if (response.shape === 'square') {
-            const shape = new Shapes.square(response.letters, response.textColor, response.shape, response.shapeColor)
+            const shape = new Shapes.square(response.letters, response.textColor, response.shapeColor)
 
             fs.writeFile('./examples/logo.svg', shape.createSVG(), (err) =>
                 err ? console.log(err) : console.log('Generated logo.svg!')
             );
         } else if (response.shape === 'triangle') {
-            const shape = new Shapes.triangle(response.letters, response.textColor, response.shape, response.shapeColor)
+            const shape = new Shapes.triangle(response.letters, response.textColor, response.shapeColor)
 
             fs.writeFile('./examples/logo.svg', shape.createSVG(), (err) =>
                 err ? console.log(err) : console.log('Generated logo.svg!')
