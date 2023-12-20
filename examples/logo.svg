@@ -2,9 +2,9 @@
         <script xmlns="" />
         <script xmlns="">window["GUARDIO_SENSOR_CONF"] = { "click": true }</script>
         <script xmlns="" />
-    
+
         <!-- Line that changes -->
         <circle cx="150" cy="100" r="80" fill="green" />
         <text x="150" y="125" font-size="60" text-anchor="middle" fill="white">SVG</text>
-        
+
 </svg>
