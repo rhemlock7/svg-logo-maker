@@ -1,7 +1,7 @@
 # SVG Logo Generator
 
 ## Video Demonstration
-link
+https://www.loom.com/share/90406e3ce4c341858a34c53b50979d65?sid=66195b95-87de-4abd-bc12-a3985453c3fb
 
 
 ## Description
